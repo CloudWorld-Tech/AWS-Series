@@ -1,3 +1,5 @@
+# AWS EKS Auto Mode Tutorial
+
 Welcome to the AWS EKS Auto Mode Tutorial repository! This repo contains everything you need to get started with AWS Elastic Kubernetes Service (EKS) Auto Mode. Whether you're looking to create an EKS cluster, deploy applications, or build a web app, this repository has you covered.
 
 Contents:
