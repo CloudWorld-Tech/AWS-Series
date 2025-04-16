@@ -20,5 +20,5 @@ spec:
           image: public.ecr.aws/r1r3f9h4/cloud-world-ecr/apps:latest
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8080
           imagePullPolicy: IfNotPresent
