@@ -6,7 +6,6 @@ metadata:
   labels:
     app: cloud-world-web
 spec:
-  type: "LoadBalancer"
   selector:
     app: cloud-world-web
   ports:

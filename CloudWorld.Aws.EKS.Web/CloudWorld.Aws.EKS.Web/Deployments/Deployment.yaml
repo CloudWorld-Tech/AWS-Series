@@ -16,7 +16,7 @@ spec:
         app: cloud-world-web
     spec:
       containers:
-        - name: nginx
+        - name: cloud-world-web
           image: public.ecr.aws/r1r3f9h4/cloud-world-ecr/apps:latest
           ports:
             - name: http
