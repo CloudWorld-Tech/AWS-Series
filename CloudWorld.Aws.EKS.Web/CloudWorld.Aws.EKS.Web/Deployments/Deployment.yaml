@@ -1,23 +1,23 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eks-sample-linux-deployment
-  namespace: eks-sample-app
+  name: cloud-world-web-deployment
+  namespace: cloud-world
   labels:
-    app: eks-sample-linux-app
+    app: cloud-world-web
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: eks-sample-linux-app
+      app: cloud-world-web
   template:
     metadata:
       labels:
-        app: eks-sample-linux-app
+        app: cloud-world-web
     spec:
       containers:
         - name: nginx
-          image: public.ecr.aws/nginx/nginx:1.23
+          image: public.ecr.aws/r1r3f9h4/cloud-world-ecr/apps:latest
           ports:
             - name: http
               containerPort: 80
