@@ -6,7 +6,7 @@ metadata:
   labels:
     app: cloud-world-web
   annotations:
-    kubernetes/io/role/elb: "true"
+    kubernetes.io/role/elb: "true"
 spec:
   type: "LoadBalancer"
   selector:
