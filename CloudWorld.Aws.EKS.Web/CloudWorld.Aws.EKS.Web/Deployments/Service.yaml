@@ -5,7 +5,10 @@ metadata:
   namespace: cloud-world
   labels:
     app: cloud-world-web
+  annotations:
+    kubernetes/io/role/elb: "true"
 spec:
+  type: "LoadBalancer"
   selector:
     app: cloud-world-web
   ports:
