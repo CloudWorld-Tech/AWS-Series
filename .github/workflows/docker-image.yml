@@ -1,0 +1,27 @@
+name: Push Image to AWS ECR Public
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push_to_ecr_public:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Login to AWS ECR Public
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          registry-type: public
+
+      - name: Build Docker image
+        run: |
+          docker build -t public.ecr.aws/r1r3f9h4/cloud-world-ecr/apps:latest CloudWorld.Aws.EKS.Web
+
+      - name: Push Docker image to AWS ECR Public
+        run: |
+          docker push public.ecr.aws/r1r3f9h4/cloud-world-ecr/apps:latest
