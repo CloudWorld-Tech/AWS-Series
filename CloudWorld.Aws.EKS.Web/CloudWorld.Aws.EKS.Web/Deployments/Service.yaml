@@ -5,6 +5,8 @@ metadata:
   namespace: cloud-world
   labels:
     app: cloud-world-web
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
 spec:
   type: "LoadBalancer"
   selector:
